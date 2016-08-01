@@ -1,0 +1,54 @@
+//Author: Sourav Mondal
+
+body {
+    padding-top: 50px;
+}
+
+.no-pad {
+    padding: 0px !important;
+}
+
+.navbar-brand {
+    width: 50%;
+    img {
+        width: 100%;
+    }
+}
+
+.nav>li>a {
+    padding: 15px 5px !important;
+}
+
+.secondary-nav {
+    border-bottom: 1px solid #ccc
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+.main-section {
+    .main-title {
+        padding-top: 20px;
+        .data-summary-cont {
+            border: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.data-container {
+    margin-top: 20px;
+    .data-display-cont {
+        padding: 0px;
+    }
+    .data-summary-cont, .data-graph-cont {
+        border: 1px solid #ccc;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        .btn-cont {
+            padding: 15px 0px;
+        }
+    }
+}
