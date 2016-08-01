@@ -15,7 +15,13 @@ module.exports = function(grunt) {
     dist: {
       src: ['.tmp/public/concat/production.js'],
       dest: '.tmp/public/min/production.min.js'
+    },
+
+    distLanding: {
+        src: ['.tmp/public/concat/productionLanding.js'],
+        dest: '.tmp/public/min/productionLanding.min.js'
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');

@@ -24,7 +24,19 @@ module.exports = function(grunt) {
     css: {
       src: require('../pipeline').cssFilesToInject,
       dest: '.tmp/public/concat/production.css'
-    }
+    },
+
+    //---------------------CUSTOM ADDED --------------
+    jsConcatLanding: {
+        src: require('../pipeline').jsFilesToInject_landing,
+        dest: '.tmp/public/concat/productionLanding.js'
+    },
+
+    cssConcatLanding: {
+        src: require('../pipeline').cssFilesToInject_landing,
+        dest: '.tmp/public/concat/productionLanding.css'
+    },
+    //------------------------------------------------
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');

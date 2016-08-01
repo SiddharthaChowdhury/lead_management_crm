@@ -58,7 +58,53 @@ module.exports = function(grunt) {
         'views/**/*.ejs': require('../pipeline').jsFilesToInject
       }
     },
+    //------------------------------------CUSTOM ADDED -------------------------------
+                                                      
+                                                      // DEV Configuration
+    devStylesLanding: {
+      options: {
+        startTag: '<!--STYLES_LANDING-->',
+        endTag: '<!--STYLES_LANDING END-->',
+        fileTmpl: '<link rel="stylesheet" href="%s">',
+        appRoot: '.tmp/public'
+      },
 
+      files: {
+        '.tmp/public/**/*.html': require('../pipeline').cssFilesToInject_landing,
+        'views/**/*.html': require('../pipeline').cssFilesToInject_landing,
+        'views/**/*.ejs': require('../pipeline').cssFilesToInject_landing
+      }
+    },
+
+    devJslanding: {
+        options: {
+            startTag: '<!--SCRIPTS_LANDING-->',
+            endTag: '<!--SCRIPTS_LANDING END-->',
+            fileTmpl: '<script src="%s"></script>',
+            appRoot: '.tmp/public'
+        },
+        files: {
+            '.tmp/public/**/*.html': require('../pipeline').jsFilesToInject_landing,
+            'views/**/*.html': require('../pipeline').jsFilesToInject_landing,
+            'views/**/*.ejs': require('../pipeline').jsFilesToInject_landing
+        }
+    },
+                                                      // PRODUCTION Configuration
+     prodJslanding: {
+        options: {
+            startTag: '<!--SCRIPTS_LANDING-->',
+            endTag: '<!--SCRIPTS_LANDING END-->',
+            fileTmpl: '<script src="%s"></script>',
+            appRoot: '.tmp/public'
+        },
+        files: {
+            '.tmp/public/**/*.html': ['.tmp/public/min/productionLanding.min.js'],
+            'views/**/*.html': ['.tmp/public/min/productionLanding.min.js'],
+            'views/**/*.ejs': ['.tmp/public/min/productionLanding.min.js']
+        }
+    },
+
+    // --------------------------------------------------------------------------------
     prodJs: {
       options: {
         startTag: '<!--SCRIPTS-->',

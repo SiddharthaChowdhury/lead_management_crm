@@ -32,8 +32,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-    '/': {
+    '/institute-management': {
         view: 'institute-management/institute-management'
+    },
+
+    '/': function(req, res){
+        return res.view('static/login',{layout:'layout-login'});
+        // view: 'static/login'
     },
 
     '/lead-management': {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+		    <!-- Viewport mobile tag for sensible mobile support -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	</head>
+    <!--STYLES_LANDING-->
+    <link rel="stylesheet" href="/landing/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/landing/styles/custom.css">
+    <link rel="stylesheet" href="/fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+    <!--STYLES_LANDING END-->
+	<body>
+		<%- body %>
+	<div class="container">
+        <footer class="footer">
+            <div class="text-center">
+                <small>
+                    <span>&copy; </span>
+                    <span id="copyrightYear"></span>
+                    <span>Akademe. All Rights Reserved.</span>
+                </small>
+            </div>
+        </footer>
+    </div>
+    <!--SCRIPTS_LANDING-->
+    <script src="/landing/js/custom.js"></script>
+    <script src="/landing/js/dependencies/jquery-1.12.3.min.js"></script>
+    <!--SCRIPTS_LANDING END-->
+    </body>
+</html>

@@ -37,7 +37,17 @@ var jsFilesToInject = [
   'js/**/*.js'
 ];
 
+// CUSTOM ADDED Task--------------------------------------------
+var cssFilesToInject_landing = [
+  'landing/styles/**/*.css',
+  'fonts/font-awesome-4.6.3/css/*.css'
+];
 
+var jsFilesToInject_landing = [
+  'landing/dependencies/**/*.js',
+  'landing/**/*.js'
+];
+//--------------------------------------------------------------
 // Client-side HTML templates are injected using the sources below
 // The ordering of these templates shouldn't matter.
 // (uses Grunt-style wildcard/glob/splat expressions)
@@ -83,6 +93,25 @@ module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPat
     return require('path').join('!assets/', tplPath.substr(1));
   }
   return require('path').join('assets/',tplPath);
+});
+
+
+//-------------------CUSTOM EXPORTS ----------------------------------------------------------
+
+module.exports.cssFilesToInject_landing = cssFilesToInject_landing.map(function(cssPathLanding) {
+  // If we're ignoring the file, make sure the ! is at the beginning of the path
+  if (cssPathLanding[0] === '!') {
+    return require('path').join('!.tmp/public/', cssPathLanding.substr(1));
+  }
+  return require('path').join('.tmp/public/', cssPathLanding);
+});
+
+module.exports.jsFilesToInject_landing = jsFilesToInject_landing.map(function(jsPathlanding) {
+  if (jsPathlanding[0] === '!') {
+    return require('path').join('!.tmp/public/', jsPathlanding.substr(1));
+  }
+  return require('path').join('.tmp/public/', jsPathlanding);
+  // return '.tmp/public/' + path;
 });
 
 
