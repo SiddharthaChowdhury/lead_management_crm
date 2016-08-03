@@ -43,13 +43,14 @@ module.exports.routes = {
     '/new_user': function(req, res){
         return res.view('static/register_user');
     },
-    '/super/admin/dashboard': 'AdminController.dash_view',
-
-    '/lead-management': {view: 'lead-management/lead-management'},
-    '/lead-management/details': {view: 'lead-management/lead-management-details'},
-    'post /rest/create/new_lead' : {controller: "LeadsController", action: "create_lead_api", model: 'Leads'},                // create or update LEAD
-    'post /create_team_tree': 'RegisterController.create_tree',  
-                                                                 // Create new tree
+    
+    '/super/admin/dashboard': 'AdminController.dash_view',                                                                    //  Superadmin dashboard        
+    '/lead-management': {view: 'lead-management/lead-management'},                                                            //  Campaign list page   
+    '/campaign/detail/view': {view: 'lead-management/lead-management-details'},                                               //  Single campaign details page
+    
+    'post /rest/create/new_lead' : {controller: "LeadsController", action: "create_lead_api", model: 'Leads'},                //  Create or update LEAD
+    'post /create_team_tree': 'RegisterController.create_tree',                                                               //  Create new tree
+                                                                 
 
   /***************************************************************************
   *                                                                          *

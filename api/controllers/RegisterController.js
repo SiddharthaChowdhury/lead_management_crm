@@ -15,7 +15,6 @@ module.exports = {
 				"password": bcrypt.hashSync(req.param("password"))
 			},
 			"activated":false,
-			"type" : "super_admin"
 		};
 
 		Institutes.count({"institute_name": doc.institute_name}, function(err, count){
@@ -29,6 +28,7 @@ module.exports = {
 						if(err) return res.negotiate(err);
 						else{
 							// make him login to admin dashboard
+							doc["type"]= "super_admin";
 							req.session.authenticated = true;
 							req.session.user = doc;
 							res.redirect('/super/admin/dashboard');
