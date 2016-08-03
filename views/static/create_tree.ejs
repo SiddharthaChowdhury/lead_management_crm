@@ -1,33 +1,36 @@
 <div class="row">
 	<div class="col-md-10">
 		<div class="col-md-5">
-			<h3>Create tree </h3>
+			<h3>Create your tree </h3>
 			<p>
 				<small>
 					Register your organization here. In the process we will create an administrator of the organization.
 				</small>
 			</p>
-			<form method="post" action="/create_team_tree">
+			<form method="post" action="/create_team_tree" id="jq_create_tree_form">
 				<div class="col-md-12">
+					<p>
+						<h5><%= typeof message != 'undefined' ? message : "" %></h5>
+					</p>
 					<div class="form-group">
 					    <label for="team_name">Team Name:</label>
-					    <input type="text" class="form-control" id="team_name">
+					    <input type="text" class="form-control" id="team_name" name="tree" />
 					</div>
 					<div class="form-group">
 					    <label for="admin_name">Admin Name:</label>
-					    <input type="text" class="form-control" id="admin_name">
+					    <input type="text" class="form-control" id="admin_name" name="admin_name" />
 					</div>
 					<div class="form-group">
 					    <label for="phone">Phone:</label>
-					    <input type="text" class="form-control" id="phone">
+					    <input type="text" class="form-control" id="phone" name="admin_phone" />
 					</div>
 					<div class="form-group">
 					    <label for="email">Email:</label>
-					    <input type="email" class="form-control" id="email">
+					    <input type="email" class="form-control" id="email" name="admin_email" />
 					</div>
 					<div class="form-group">
 					    <label for="password">Password:</label>
-					    <input type="password" class="form-control" id="password" placeholder="********" />
+					    <input type="password" class="form-control" id="password" name="password" placeholder="********" />
 					</div>
 					<button type="submit" class="btn btn-primary pull-right">Create team</button>
 				</div>

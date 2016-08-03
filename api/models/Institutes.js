@@ -11,7 +11,10 @@ module.exports = {
 			type: 'string',
 			required:true,
 		},
-		campaign:{
+		admin:{
+			type:"json"
+		},
+		branches:{
 			type:"json"
 		}
 	},

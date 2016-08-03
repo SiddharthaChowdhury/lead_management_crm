@@ -1,7 +1,13 @@
 .thumbnail{
 	border: none;
 }
-
 .pack-selector{
 	text-decoration: none;
+}
+
+.error{
+	color: #FF3361;
+	font-style: italic;
+	font-size: 12px;
+	font-weight: 400;
 }

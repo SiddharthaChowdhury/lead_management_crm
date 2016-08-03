@@ -37,15 +37,19 @@ module.exports.routes = {
         return res.view('static/landing',{layout:'layout-landing'});
         // view: 'static/login'
     },
-    '/static/create_tree':{view: 'static/create_tree'},
+    '/static/create_tree':function(req, res){
+      return res.view('static/create_tree',{layout:'layout-landing', step:1});
+    },
     '/new_user': function(req, res){
         return res.view('static/register_user');
-        // view: 'static/login'
     },
+    '/super/admin/dashboard': 'AdminController.dash_view',
+
     '/lead-management': {view: 'lead-management/lead-management'},
     '/lead-management/details': {view: 'lead-management/lead-management-details'},
     'post /rest/create/new_lead' : {controller: "LeadsController", action: "create_lead_api", model: 'Leads'},                // create or update LEAD
-    'post /create_team_tree': 'RegisterController.create_tree',                                                               // Create new tree
+    'post /create_team_tree': 'RegisterController.create_tree',  
+                                                                 // Create new tree
 
   /***************************************************************************
   *                                                                          *
