@@ -38,3 +38,10 @@ tr:hover {
 .modal-change {
     border-top : none ! important;
 }
+
+/*Sidd added*/
+.faq_solutions{
+  padding: 0px 20px;
+  border: 1px dashed grey;
+  border-radius: 5px; 
+}
