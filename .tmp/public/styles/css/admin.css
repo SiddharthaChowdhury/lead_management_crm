@@ -39,9 +39,11 @@ tr:hover {
     border-top : none ! important;
 }
 
-/*Sidd added*/
-.faq_solutions{
+/*    Sidd added --- START --- */
+.si_faq_solutions{
   padding: 0px 20px;
   border: 1px dashed grey;
   border-radius: 5px; 
 }
+
+/*    Sidd added --- END --- */

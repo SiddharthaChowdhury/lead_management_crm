@@ -44,7 +44,7 @@ module.exports.routes = {
         return res.view('static/register_user');
     },
     
-    '/admin/dashboard' : { view: 'superadmin/dashboard' },
+    '/admin/dashboard' : { view: 'superadmin/dashboard/dashboard' },
     '/super/admin/dashboard': 'AdminController.dash_view',                                                                    //  Superadmin dashboard        
     '/lead-management': {view: 'lead-management/lead-management'},                                                            //  Campaign list page   
     '/campaign/detail/view': {view: 'lead-management/lead-management-details'},                                               //  Single campaign details page
