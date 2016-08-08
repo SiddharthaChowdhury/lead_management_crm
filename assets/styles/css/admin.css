@@ -59,4 +59,8 @@ tr:hover {
 .si_new_block{
   margin: 15px 0px;
 }
+
+.pac-container {
+    z-index: 1051 !important;
+}
 /*    Sidd added --- END --- */

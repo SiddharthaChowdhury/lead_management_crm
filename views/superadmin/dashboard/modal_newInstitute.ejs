@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="modal_newInstitute" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
     
       <!-- Modal content-->
 	    <div class="modal-content">
@@ -14,11 +14,14 @@
 	        	<p class="text-right">Create new branch &nbsp;<button class="btn btn-warning jq_new_branch"><i class="fa fa-plus" aria-hidden="true"></i> Add</button></p>
 	        	<div class="row" id="si_new_branches">
 
-		            <div class="si_new_block hide-this col-md-12">
+		            <div class="si_new_block col-md-12 hide-this">
 		            	<div class="text-center">Branch <span>1</span></div>
 		            	<p class="col-md-12"><input type="text"  class="form-control" placeholder="Institute Name" /></p>
-		            	<div class="col-md-10"><input type="text"  class="form-control" placeholder="Place" /></div>
+		            	<div class="col-md-10"><input type="search"  class="form-control si_getLocation" placeholder="Place" /></div>
 		            	<div class="col-md-2"><input type="text"  class="form-control" placeholder="Zip" /></div>
+		            	<input type="hidden" name="lat" class="lat"/>
+		            	<input type="hidden" name="lng" class="lng"/>
+		            	<input type="hidden" name="formatted_address" class="formatted_address"/>
 		            </div>
 		        </div>
 	        </div>
@@ -27,6 +30,5 @@
 	        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	        </div>
 	    </div>
-      
     </div>
 </div>
