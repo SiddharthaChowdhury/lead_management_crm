@@ -40,10 +40,23 @@ tr:hover {
 }
 
 /*    Sidd added --- START --- */
+.hide-this {
+    display: none;
+}
+
 .si_faq_solutions{
   padding: 0px 20px;
   border: 1px dashed grey;
   border-radius: 5px; 
 }
 
+.si_divider{
+  background: grey;
+  height: 1px;
+  margin: 15px 0px;
+}
+
+.si_new_block{
+  margin: 15px 0px;
+}
 /*    Sidd added --- END --- */
